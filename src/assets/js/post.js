@@ -1,3 +1,5 @@
+import {getTextPostHtml} from "./constants/posts";
+
 let posts = document.querySelector('.post__js1')
 let text = 'Lorem ipsum dolor sit amet, ' +
     'consectetur adipiscing elit. Elementum ' +
@@ -27,29 +29,10 @@ let postContent = [
 
 ]
 
-
 postContent.forEach(post => {
-    let div = document.createElement('div')
-
-    div.innerHTML = `
-<div class="post">
-    <div class="post__content">
-        <p class="post__description">
-           ${post.text}
-        </p>
-    </div>
-    <div class="post__footer">
-        <ul class="post__data">
-            <li class="post__data-item">
-                <time datetime="2020-06-21">
-                 ${post.date}
-                </time>
-            </li>
-        </ul>
-    </div>
-   </div>
-`
-    posts.appendChild(div)
+    let article = document.createElement('article')
+    article.innerHTML = getTextPostHtml(post)
+    posts.prepend(article)
 })
 
 
