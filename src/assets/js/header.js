@@ -1,4 +1,4 @@
-import {getHeaderLeftHtml, getHeaderRightHtml} from "./constants/headers"
+import {getHeaderLeftHtml, getHeaderRightHtml} from './constants/headers'
 
 let header = document.querySelector('.nav__list')
 
