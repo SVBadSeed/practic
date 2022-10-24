@@ -1,12 +1,12 @@
-import {getTextPostHtml} from "./constants/posts";
+import {getTextPostHtml} from "./constants/posts"
 
 let posts = document.querySelector('.post__js1')
 let text = 'Lorem ipsum dolor sit amet, ' +
     'consectetur adipiscing elit. Elementum ' +
     'volutpat orci turpis urna. Et vestibulum,' +
-    ' posuere tortor lacinia sit. Sagittis' +
-    ' porttitor orci auctor in at tincidunt' +
-    ' arcu egestas. Fusce arcu sodales lacinia ' +
+    'posuere tortor lacinia sit. Sagittis' +
+    'porttitor orci auctor in at tincidunt' +
+    'arcu egestas. Fusce arcu sodales lacinia ' +
     'eu auctor nunc nam id. Diam sit sed volutpat ' +
     'massa. Egestas ornare vel volutpat. '
 let postContent = [
@@ -34,18 +34,6 @@ postContent.forEach(post => {
     article.innerHTML = getTextPostHtml(post)
     posts.prepend(article)
 })
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
