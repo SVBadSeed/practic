@@ -1,13 +1,23 @@
 import {getHeaderLeftHtml, getHeaderRightHtml} from "./constants/headers"
 
-let header = document.querySelector('.header')
+let header = document.querySelector('.nav__list')
 
 let headerLeftContent = [
     {
-        text: 'Главная',
-        article: 'Статьи',
-        about: 'Обо мне',
-        ad: 'Реклама'
+        title: 'Главная',
+        link: 'index.html'
+    },
+    {
+        title: 'Статьи',
+        link: 'index.html'
+    },
+    {
+        title: 'Обо мне',
+        link: 'text.html'
+    },
+    {
+        title: 'Реклама',
+        link: 'text.html'
     }
 ]
 let headerRightContent = [
@@ -18,11 +28,11 @@ let headerRightContent = [
 ]
 
 headerLeftContent.forEach(item => {
-    let div = document.createElement('div')
-    div.className = 'header__left'
-    div.innerHTML = getHeaderLeftHtml(item)
+    let li = document.createElement('li')
+    li.className = 'nav__item'
+    li.innerHTML = getHeaderLeftHtml(item)
 
-    header.prepend(div)
+    header.append(li)
 })
 
 
