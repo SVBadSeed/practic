@@ -54,36 +54,35 @@ export const getImagePostHtml = (post) => {
 
 export const getVideoPostHtml = (post) => {
     return `
-    <div class="post__header post__header--preview">
-            <a href="post.html">
-                <img class="post__image" src="assets/images/post-2.jpg"
-                     alt="Как писать код быстро и безболезненно?">
-            </a>
-        </div>
-        <div class="post__content">
-            <h2 class="post__title">
-                <a href="post.html">
-                   ${post.title}
-                </a>
-            </h2>
-            <p class="post__description">
-               ${post.text}
-            </p>
-        </div>
+          <div class="post__header">
+              <div class="embed">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/0QKQlf8r7ls"
+                          frameborder="0" allow="accelerometer; autoplay;
+                   clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowfullscreen></iframe>
+              </div>
+          </div>
+          <div class="post__content">
+              <h2 class="post__title">
+                  <a href="post.html">
+                     ${post.title}
+                  </a>
+              </h2>
+          </div>
 
-        <div class="post__footer">
-            <ul class="post__data">
-                <li class="post__data-item">
-                    <time datetime="2020-06-21">
-                      ${post.date}
-                    </time>
-                </li>
-                <li class="post__data-item">
-                    <a href="#">${post.dataItem}</a>
-                </li>
-            </ul>
-            <a class="post__read" href="#"> ${post.read}</a>
-        </div>   
+          <div class="post__footer">
+              <ul class="post__data">
+                  <li class="post__data-item">
+                      <time datetime="2020-06-21">
+                          21.06.2020
+                      </time>
+                  </li>
+                  <li class="post__data-item">
+                      <a href="">продвижение видео</a>
+                  </li>
+              </ul>
+              <a class="post__read" href="#">оставить комментарий</a>
+          </div>
 `
 }
 

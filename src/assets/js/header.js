@@ -1,6 +1,8 @@
-import {getHeaderLeftHtml, getHeaderRightHtml} from './constants/headers'
+import {getHeaderLeftHtml, getHeaderRightHtml, getSearchContentHtml} from './constants/headers'
 
-let header = document.querySelector('.nav__list')
+let headerLeft = document.querySelector('.nav__list')
+let headerRight = document.querySelector('.nav__list-right')
+let headerSearch = document.querySelector('.search')
 
 let headerLeftContent = [
     {
@@ -23,23 +25,38 @@ let headerLeftContent = [
 let headerRightContent = [
     {
         profile: 'Профиль',
-        close: 'Выйти'
+        link: 'profile.html'
+    },
+    {
+        profile: 'Выйти',
+        link: '#'
     }
 ]
+let searchContent = [
+    {}
+]
+
 
 headerLeftContent.forEach(item => {
     let li = document.createElement('li')
     li.className = 'nav__item'
     li.innerHTML = getHeaderLeftHtml(item)
 
-    header.append(li)
+    headerLeft.append(li)
 })
 
-
 headerRightContent.forEach(item => {
-    let div = document.createElement('div')
-    div.className = 'header__right'
-    div.innerHTML = getHeaderRightHtml(item)
+    let li = document.createElement('li')
+    li.className = 'nav__item'
+    li.innerHTML = getHeaderRightHtml(item)
 
-    header.append(div)
+    headerRight.append(li)
+})
+
+searchContent.forEach(item => {
+    let form = document.createElement('div')
+    form.className = 'search__container'
+    form.innerHTML = getSearchContentHtml(item)
+
+    headerSearch.append(form)
 })

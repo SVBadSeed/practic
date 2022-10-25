@@ -1,4 +1,4 @@
-import {getImagePostHtml, getRandomPostText, getTextPostHtml, getVideoPostHtml} from "./constants/posts"
+import {getImagePostHtml, getRandomPostText, getTextPostHtml, getVideoPostHtml} from './constants/posts'
 
 let posts = document.querySelector('.post__js1')
 let text = getRandomPostText()
@@ -19,7 +19,7 @@ let postContent = [
     },
     {
         image: '',
-        title: 'Как писать код быстро и безболезненно?',
+        title: 'Купил новый ноутбук за 150 000 руб',
         text: text,
         date: '26.09.2017',
         dataItem: 'Создание сайтов',
