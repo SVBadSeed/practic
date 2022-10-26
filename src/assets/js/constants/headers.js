@@ -1,7 +1,13 @@
 export const getHeaderLeftHtml = (item) => {
     return `
- <a class="nav__link" href=${item.link}>${item.title}</a>
+         <a class="nav__link" href=${item.link}>${item.title}</a>        
     `
+}
+
+export const getHeaderNestedHtml = (item) => {
+    return `
+     <a class="subnav__link" href="">${item.title}</a>
+`
 }
 
 

@@ -1,4 +1,4 @@
-import {getHeaderLeftHtml, getHeaderRightHtml, getSearchContentHtml} from './constants/headers'
+import {getHeaderLeftHtml, getHeaderRightHtml, getSearchContentHtml, getHeaderNestedHtml} from './constants/headers'
 
 let headerLeft = document.querySelector('.nav__list')
 let headerRight = document.querySelector('.nav__list-right')
@@ -7,19 +7,28 @@ let headerSearch = document.querySelector('.search')
 let headerLeftContent = [
     {
         title: 'Главная',
-        link: 'index.html'
+        link: 'index.html',
+        type: 'outer'
     },
     {
         title: 'Статьи',
-        link: 'index.html'
+        link: 'index.html',
+        type: 'nested',
+        childLink: [
+            {title: 'Создание сайтов'},
+            {title: 'Интернет-маркетинг'},
+            {title: 'Продвижение видео'}
+        ]
     },
     {
         title: 'Обо мне',
-        link: 'text.html'
+        link: 'text.html',
+        type: 'outer'
     },
     {
         title: 'Реклама',
-        link: 'text.html'
+        link: 'text.html',
+        type: 'outer'
     }
 ]
 let headerRightContent = [
@@ -36,14 +45,29 @@ let searchContent = [
     {}
 ]
 
+headerLeftContent.forEach(linkItem => {
+    let navItem = document.createElement('li')
+    navItem.className = 'nav__item'
+    navItem.innerHTML = getHeaderLeftHtml(linkItem)
 
-headerLeftContent.forEach(item => {
-    let li = document.createElement('li')
-    li.className = 'nav__item'
-    li.innerHTML = getHeaderLeftHtml(item)
+    if (linkItem.type === 'nested') {
+        let subNav = document.createElement('ul')
 
-    headerLeft.append(li)
+        subNav.className = 'subnav'
+        navItem.appendChild(subNav)
+
+        linkItem.childLink.forEach(item => {
+            let li = document.createElement('li')
+            li.innerHTML = getHeaderNestedHtml(item)
+
+            subNav.appendChild(li)
+        })
+
+    }
+
+    headerLeft.appendChild(navItem)
 })
+
 
 headerRightContent.forEach(item => {
     let li = document.createElement('li')
