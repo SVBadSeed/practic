@@ -62,7 +62,6 @@ headerLeftContent.forEach(linkItem => {
 
             subNav.appendChild(li)
         })
-
     }
 
     headerLeft.appendChild(navItem)
