@@ -11,6 +11,7 @@ modalBtn.forEach(item => {
         let modal = document.getElementById(modalId)
         let modalContent = modal.querySelector('.modal__content')
 
+
         modalContent.addEventListener('click', event => {
             event.stopPropagation()
         })
