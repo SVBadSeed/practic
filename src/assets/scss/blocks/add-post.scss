@@ -36,7 +36,7 @@
 }
 
 .add-post__form-actions {
-  width: 12rem;
+  width: 21rem;
   flex-shrink: 0;
   display: flex;
   justify-content: flex-end;
@@ -94,6 +94,22 @@
 
   @include breakpoint($mobile-bp) {
     background-size: 1.5rem;
+  }
+
+  &--red {
+    background-color: $red;
+
+    &:hover {
+      background-color: darken($red, 5%);
+    }
+  }
+
+  &--orange {
+    background-color: $orange;
+
+    &:hover {
+      background-color: darken($orange, 5%);
+    }
   }
 }
 
