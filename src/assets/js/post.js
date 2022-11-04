@@ -62,16 +62,31 @@ postContent.forEach(post => {
 
 
 let buttonFilter = document.querySelector('.add-post__send--red')
+let buttonFilter2 = document.querySelector('.add-post__send--orange')
 let postAll = document.querySelectorAll('.post__js1 > .post')
 
 
 buttonFilter.addEventListener('click', event => {
     event.preventDefault()
     postAll.forEach(post => {
+        post.style.display = 'block'
         let postCategory = post.querySelector('.post__category')
         if (postCategory.textContent !== 'Создание сайтов') {
             post.style.display = 'none'
         }
     })
 
+})
+
+
+buttonFilter2.addEventListener('click', event => {
+    event.preventDefault()
+
+    postAll.forEach(post => {
+        post.style.display = 'block'
+        let postCategory = post.querySelector('.post__category')
+        if (postCategory.textContent !== 'Заметка') {
+            post.style.display = 'none'
+        }
+    })
 })
