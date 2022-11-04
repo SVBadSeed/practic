@@ -1,6 +1,6 @@
 import {getImagePostHtml, getRandomPostText, getTextPostHtml, getVideoPostHtml} from './constants/posts'
 
-let posts = document.querySelector('.post__js1')
+let postsContainer = document.querySelector('.post__js1')
 let text = getRandomPostText()
 let postContent = [
     {
@@ -14,7 +14,6 @@ let postContent = [
         title: 'Как писать код быстро и безболезненно?',
         text: text,
         date: '26.09.2017',
-        dataItem: 'Создание сайтов',
         read: 'Читать',
         type: 'image',
         category: 'Создание сайтов'
@@ -24,7 +23,6 @@ let postContent = [
         title: 'Как писать код быстро и безболезненно?',
         text: text,
         date: '26.09.2017',
-        dataItem: 'Создание сайтов',
         read: 'Читать',
         type: 'image',
         category: 'Создание сайтов'
@@ -40,7 +38,6 @@ let postContent = [
         title: 'Как писать код быстро и безболезненно?',
         text: text,
         date: '26.09.2017',
-        dataItem: 'Создание сайтов',
         read: 'Читать',
         type: 'image',
         category: 'Создание сайтов'
@@ -60,54 +57,21 @@ postContent.forEach(post => {
         article.innerHTMl = getVideoPostHtml(post)
     }
 
-    posts.prepend(article)
+    postsContainer.prepend(article)
 })
 
 
 let buttonFilter = document.querySelector('.add-post__send--red')
-let postAll = document.querySelectorAll('.post')
+let postAll = document.querySelectorAll('.post__js1 > .post')
 
 
 buttonFilter.addEventListener('click', event => {
     event.preventDefault()
-
-    postContent.forEach(elem => {
-        if (elem.category === 'Заметка') {
-
+    postAll.forEach(post => {
+        let postCategory = post.querySelector('.post__category')
+        if (postCategory.textContent !== 'Создание сайтов') {
+            post.style.display = 'none'
         }
     })
 
 })
-
-// postContent.forEach(content => {
-//     if (content.category === 'Создание сайтов') {
-//         category.push(content)
-//     }
-// })
-//
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

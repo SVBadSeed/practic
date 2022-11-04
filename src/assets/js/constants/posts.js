@@ -12,6 +12,9 @@ export const getTextPostHtml = (post) => {
                    ${post.date}
                 </time>
             </li>
+             <li class="post__data-item">
+                 <a class="post__category" href="#">${post.category}</a>
+               </li>
         </ul>
     </div>
     `
@@ -44,7 +47,7 @@ export const getImagePostHtml = (post) => {
                     </time>
                 </li>
                 <li class="post__data-item">
-                    <a href="#">${post.dataItem}</a>
+                    <a class="post__category" href="#">${post.category}</a>
                 </li>
             </ul>
             <a class="post__read" href="#"> ${post.read}</a>
