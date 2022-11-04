@@ -135,8 +135,8 @@ function cssWatch(cb) {
     cb()
 }
 
-function js(cb) {
-    return src(path.src.js, {base: srcPath + 'assets/js/'})
+function js() {
+    return src(srcPath + 'assets/js/indexPage/*.js')
         .pipe(plumber({
             errorHandler: function (err) {
                 notify.onError({
@@ -148,14 +148,24 @@ function js(cb) {
         }))
         .pipe(webpackStream({
             mode: 'production',
+            entry: {
+                addPost: './src/assets/js/addPost.js',
+                header: './src/assets/js/header.js',
+                mobileNav: './src/assets/js/mobileNav.js',
+                modal: './src/assets/js/modal.js',
+                pagination: './src/assets/js/pagination.js',
+                post: './src/assets/js/post.js',
+                sidebar: './src/assets/js/sidebar.js',
+                stori: './src/assets/js/stori.js',
+                textarea: './src/assets/js/textarea.js',
+                work: './src/assets/js/work.js',
+            },
             output: {
-                filename: 'app.js',
-            }
+                filename: '[name].js',
+            },
         }))
         .pipe(dest(path.build.js))
         .pipe(browserSync.reload({stream: true}))
-
-    cb()
 }
 
 function jsWatch(cb) {
