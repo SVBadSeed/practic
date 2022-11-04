@@ -6,7 +6,8 @@ let postContent = [
     {
         text: text,
         date: '13.06.2015',
-        type: 'text'
+        type: 'text',
+        category: 'Заметка'
     },
     {
         image: '',
@@ -15,16 +16,8 @@ let postContent = [
         date: '26.09.2017',
         dataItem: 'Создание сайтов',
         read: 'Читать',
-        type: 'image'
-    },
-    {
-        image: '',
-        title: 'Купил новый ноутбук за 150 000 руб',
-        text: text,
-        date: '26.09.2017',
-        dataItem: 'Создание сайтов',
-        read: 'Читать',
-        type: 'video'
+        type: 'image',
+        category: 'Создание сайтов'
     },
     {
         image: '',
@@ -33,8 +26,25 @@ let postContent = [
         date: '26.09.2017',
         dataItem: 'Создание сайтов',
         read: 'Читать',
-        type: 'image'
-    }
+        type: 'image',
+        category: 'Создание сайтов'
+    },
+    {
+        text: text,
+        date: '13.06.2015',
+        type: 'text',
+        category: 'Заметка'
+    },
+    {
+        image: '',
+        title: 'Как писать код быстро и безболезненно?',
+        text: text,
+        date: '26.09.2017',
+        dataItem: 'Создание сайтов',
+        read: 'Читать',
+        type: 'image',
+        category: 'Создание сайтов'
+    },
 
 ]
 
@@ -52,6 +62,49 @@ postContent.forEach(post => {
 
     posts.prepend(article)
 })
+
+
+let buttonFilter = document.querySelector('.add-post__send--red')
+let postAll = document.querySelectorAll('.post')
+
+
+buttonFilter.addEventListener('click', event => {
+    event.preventDefault()
+
+    postContent.forEach(elem => {
+        if (elem.category === 'Заметка') {
+
+        }
+    })
+
+})
+
+// postContent.forEach(content => {
+//     if (content.category === 'Создание сайтов') {
+//         category.push(content)
+//     }
+// })
+//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

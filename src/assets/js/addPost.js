@@ -17,3 +17,4 @@ buttonSend.addEventListener('click', event => {
 
     posts.prepend(article)
 })
+
