@@ -180,10 +180,22 @@ function jsWatch(cb) {
             }
         }))
         .pipe(webpackStream({
-            mode: 'development',
+            mode: 'production',
+            entry: {
+                addPost: './src/assets/js/addPost.js',
+                header: './src/assets/js/header.js',
+                mobileNav: './src/assets/js/mobileNav.js',
+                modal: './src/assets/js/modal.js',
+                pagination: './src/assets/js/pagination.js',
+                post: './src/assets/js/post.js',
+                sidebar: './src/assets/js/sidebar.js',
+                stori: './src/assets/js/stori.js',
+                textarea: './src/assets/js/textarea.js',
+                work: './src/assets/js/work.js',
+            },
             output: {
-                filename: 'app.js',
-            }
+                filename: '[name].js',
+            },
         }))
         .pipe(dest(path.build.js))
         .pipe(browserSync.reload({stream: true}))
