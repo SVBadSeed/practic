@@ -147,7 +147,7 @@ function js() {
             }
         }))
         .pipe(webpackStream({
-            mode: 'production',
+            // mode: 'production',
             entry: {
                 addPost: './src/assets/js/addPost.js',
                 header: './src/assets/js/header.js',
@@ -159,6 +159,7 @@ function js() {
                 stori: './src/assets/js/stori.js',
                 textarea: './src/assets/js/textarea.js',
                 work: './src/assets/js/work.js',
+                commend: './src/assets/js/commend.js',
             },
             output: {
                 filename: '[name].js',
@@ -180,7 +181,7 @@ function jsWatch(cb) {
             }
         }))
         .pipe(webpackStream({
-            mode: 'production',
+            // mode: 'production',
             entry: {
                 addPost: './src/assets/js/addPost.js',
                 header: './src/assets/js/header.js',
@@ -192,6 +193,7 @@ function jsWatch(cb) {
                 stori: './src/assets/js/stori.js',
                 textarea: './src/assets/js/textarea.js',
                 work: './src/assets/js/work.js',
+                commend: './src/assets/js/commend.js',
             },
             output: {
                 filename: '[name].js',
