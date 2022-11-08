@@ -160,6 +160,7 @@ function js() {
                 textarea: './src/assets/js/textarea.js',
                 work: './src/assets/js/work.js',
                 commend: './src/assets/js/commend.js',
+                related: './src/assets/js/related.js',
             },
             output: {
                 filename: '[name].js',
@@ -194,6 +195,7 @@ function jsWatch(cb) {
                 textarea: './src/assets/js/textarea.js',
                 work: './src/assets/js/work.js',
                 commend: './src/assets/js/commend.js',
+                related: './src/assets/js/related.js',
             },
             output: {
                 filename: '[name].js',
