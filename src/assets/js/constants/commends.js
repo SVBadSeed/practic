@@ -17,6 +17,24 @@ export const getCommentsHtml = (item) => {
     `
 }
 
+export const commentsHtml = (item, text, date) => {
+    return `
+     <div class="commends__header">
+                       <img class="commends__avatar" src="${item.image}">
+                    <div class="commends__author">
+                        <div class="commends__name">${item.name}</div>
+                        <time class="commends__pubdate" datetime="2020-12-21 19:21">
+                           ${date}
+                        </time>
+                    </div>
+                </div>
+                <div class="commends__text">
+               ${text}
+                </div>
+                <button class="commends__reply" type="button">ответить</button>
+    `
+}
+
 export const getText = () => {
     return `
     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -25,3 +43,28 @@ export const getText = () => {
                     numquam officia rerum tenetur voluptate!
     `
 }
+
+
+// buttonCommend.addEventListener('click', event => {
+//     event.preventDefault()
+//
+//     let commentData = new Date().toLocaleString().slice(0, 10)
+//     let commentText = commendTextarea.value
+//     commendTextarea.value = ''
+//
+//     commentsContent.forEach(item => {
+//         let commendItem = document.createElement('li')
+//         commendItem.className = 'commends__item'
+//         commendItem.innerHTML = getCommentsHtml(item, commentText, commentData)
+//
+//         let commendItemAnswer = document.createElement('ul')
+//         commendItemAnswer.className = 'commends-child'
+//
+//         commendItem.appendChild(commendItemAnswer)
+//         commends.append(commendItem)
+//     })
+// })
+
+
+
+

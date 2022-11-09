@@ -147,7 +147,7 @@ function js() {
             }
         }))
         .pipe(webpackStream({
-            // mode: 'production',
+            mode: 'development',
             entry: {
                 addPost: './src/assets/js/addPost.js',
                 header: './src/assets/js/header.js',
@@ -182,7 +182,7 @@ function jsWatch(cb) {
             }
         }))
         .pipe(webpackStream({
-            // mode: 'production',
+            mode: 'development',
             entry: {
                 addPost: './src/assets/js/addPost.js',
                 header: './src/assets/js/header.js',
