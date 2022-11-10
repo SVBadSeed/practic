@@ -54,9 +54,26 @@ buttonCommend.addEventListener('click', event => {
 
         let buttonAnswer = commendItem.querySelector('.commends__reply')
 
-        buttonAnswer.addEventListener('click', () => {
+        buttonAnswer.addEventListener('click', event => {
+            event.preventDefault()
 
+            let commentData = {
+                image: 'assets/images/commend-user.jpg',
+                name: 'Гавр',
+                time: '1 неделю назад',
+                text: text
+            }
+            let parent = event.target.parentNode
+            let commendItemAnswer = document.createElement('ul')
+            commendItemAnswer.className = 'commends-child'
 
+            let commendItemChild = document.createElement('li')
+            commendItemChild.className = 'commends__item'
+            commendItemChild.innerHTML = getCommentsHtml(commentData)
+
+            commendItemAnswer.appendChild(commendItemChild)
+
+            parent.appendChild(commendItemAnswer)
         })
 
         commends.prepend(commendItem)
