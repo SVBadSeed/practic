@@ -24,4 +24,3 @@
 //     body.classList.remove('show-sidebar')
 //     document.querySelector('.page__mask').remove()
 // }
-//
