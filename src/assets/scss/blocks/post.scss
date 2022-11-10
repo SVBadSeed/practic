@@ -2,6 +2,7 @@
   margin-bottom: 3rem;
   padding: 2.5rem;
   overflow: hidden;
+  position: relative;
 
   background-color: $primary;
   box-shadow: 0 15px 25px rgba($black, .35);
@@ -12,9 +13,51 @@
   }
 }
 
-.hide {
-  display: none;
+.post__button-close {
+  width: 2rem;
+  height: 2rem;
+
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+
+  text-decoration: none;
+  background: none;
+  border: none;
+
+  span {
+    opacity: 0;
+  }
+
+  &:before,
+  &:after,
+  span {
+    display: block;
+    width: 20px;
+    height: 2px;
+
+    background-color: $white;
+
+    position: absolute;
+    left: 0;
+  }
+
+  &:after,
+  &:before,
+  span {
+    content: "";
+    transition: transform .2s linear;
+  }
+
+  &:before {
+    transform: rotate(45deg);
+  }
+
+  &:after {
+    transform: rotate(-45deg);
+  }
 }
+
 
 .post__header {
   margin: 0 0 2.5rem;

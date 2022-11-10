@@ -1,5 +1,8 @@
 export const getTextPostHtml = (post) => {
     return `
+     <button class="post__button-close" type="button">
+      <span>Закрыть</span>
+     </button>
     <div class="post__content">
        <p class="post__description">
            ${post.text}
@@ -22,6 +25,9 @@ export const getTextPostHtml = (post) => {
 
 export const getImagePostHtml = (post) => {
     return `
+ <button class="post__button-close" type="button">     
+ <span>Закрыть</span>
+     </button>
   <div class="post__header post__header--preview">
             <a href="post.html">
                 <img class="post__image" src="assets/images/post-2.jpg"
@@ -57,6 +63,9 @@ export const getImagePostHtml = (post) => {
 
 export const getVideoPostHtml = (post) => {
     return `
+ <button class="post__button-close" type="button">
+    
+     </button>
           <div class="post__header">
               <div class="embed">
                   <iframe width="560" height="315" src="https://www.youtube.com/embed/0QKQlf8r7ls"
