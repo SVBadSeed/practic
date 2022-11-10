@@ -25,13 +25,9 @@
   background: none;
   border: none;
 
-  span {
-    opacity: 0;
-  }
 
   &:before,
-  &:after,
-  span {
+  &:after, {
     display: block;
     width: 20px;
     height: 2px;
@@ -43,8 +39,7 @@
   }
 
   &:after,
-  &:before,
-  span {
+  &:before, {
     content: "";
     transition: transform .2s linear;
   }
