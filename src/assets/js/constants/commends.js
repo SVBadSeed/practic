@@ -45,25 +45,6 @@ export const getText = () => {
 }
 
 
-// buttonCommend.addEventListener('click', event => {
-//     event.preventDefault()
-//
-//     let commentData = new Date().toLocaleString().slice(0, 10)
-//     let commentText = commendTextarea.value
-//     commendTextarea.value = ''
-//
-//     commentsContent.forEach(item => {
-//         let commendItem = document.createElement('li')
-//         commendItem.className = 'commends__item'
-//         commendItem.innerHTML = getCommentsHtml(item, commentText, commentData)
-//
-//         let commendItemAnswer = document.createElement('ul')
-//         commendItemAnswer.className = 'commends-child'
-//
-//         commendItem.appendChild(commendItemAnswer)
-//         commends.append(commendItem)
-//     })
-// })
 
 
 

@@ -4,6 +4,7 @@ let postsContainer = document.querySelector('.post__js1')
 let text = getRandomPostText()
 let postContent = [
     {
+        title: 'Заметка',
         text: text,
         date: '13.06.2015',
         type: 'text',
@@ -28,6 +29,7 @@ let postContent = [
         category: 'Создание сайтов'
     },
     {
+        title: 'Заметка',
         text: text,
         date: '13.06.2015',
         type: 'text',
@@ -44,7 +46,6 @@ let postContent = [
     },
 
 ]
-
 postContent.forEach(post => {
     let article = document.createElement('article')
     article.className = 'post'
@@ -56,12 +57,9 @@ postContent.forEach(post => {
     } else if (post.type === 'video') {
         article.innerHTMl = getVideoPostHtml(post)
     }
-
     postsContainer.prepend(article)
 
-
 })
-
 
 let buttonFilter = document.querySelector('.add-post__send--red')
 let buttonFilter2 = document.querySelector('.add-post__send--orange')
@@ -81,7 +79,6 @@ buttonFilter.addEventListener('click', event => {
 
 })
 
-
 buttonFilter2.addEventListener('click', event => {
     event.preventDefault()
 
@@ -96,10 +93,7 @@ buttonFilter2.addEventListener('click', event => {
 
 postButtonClose.forEach(item => {
     item.addEventListener('click', event => {
-
-        postAll.forEach(post => {
-            let parent = event.target.parentNode
-            parent.style.display = 'none'
-        })
+        let parent = event.target.parentNode
+        parent.style.display = 'none'
     })
 })

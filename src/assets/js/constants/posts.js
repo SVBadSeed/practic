@@ -3,6 +3,11 @@ export const getTextPostHtml = (post) => {
      <button class="post__button-close" type="button">
      </button>
     <div class="post__content">
+      <h2 class="post__title">
+                <a href="post.html">
+                   ${post.title}
+                </a>
+            </h2>
        <p class="post__description">
            ${post.text}
        </p>

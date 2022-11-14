@@ -161,6 +161,7 @@ function js() {
                 work: './src/assets/js/work.js',
                 commend: './src/assets/js/commend.js',
                 related: './src/assets/js/related.js',
+                search: './src/assets/js/search.js'
             },
             output: {
                 filename: '[name].js',
@@ -196,6 +197,7 @@ function jsWatch(cb) {
                 work: './src/assets/js/work.js',
                 commend: './src/assets/js/commend.js',
                 related: './src/assets/js/related.js',
+                search: './src/assets/js/search.js'
             },
             output: {
                 filename: '[name].js',

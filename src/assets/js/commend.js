@@ -81,7 +81,6 @@ buttonCommend.addEventListener('click', event => {
 })
 
 let buttonAnswer = document.querySelectorAll('.commends__reply')
-
 buttonAnswer.forEach(item => {
 
     item.addEventListener('click', event => {
@@ -94,6 +93,7 @@ buttonAnswer.forEach(item => {
             text: text
         }
         let parent = event.target.parentNode
+
         let commendItemAnswer = document.createElement('ul')
         commendItemAnswer.className = 'commends-child'
 
@@ -102,11 +102,9 @@ buttonAnswer.forEach(item => {
         commendItemChild.innerHTML = getCommentsHtml(commentData)
 
         commendItemAnswer.appendChild(commendItemChild)
-
         parent.appendChild(commendItemAnswer)
     })
 })
-
 
 
 
