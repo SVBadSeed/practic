@@ -2,50 +2,27 @@ import {getImagePostHtml, getRandomPostText, getTextPostHtml, getVideoPostHtml} 
 
 let postsContainer = document.querySelector('.post__js1')
 let text = getRandomPostText()
-let postContent = [
-    {
-        title: 'Заметка',
-        text: text,
-        date: '13.06.2015',
-        type: 'text',
-        category: 'Заметка'
-    },
-    {
-        image: '',
-        title: 'Как писать код быстро и безболезненно?',
-        text: text,
-        date: '26.09.2017',
-        read: 'Читать',
-        type: 'image',
-        category: 'Создание сайтов'
-    },
-    {
-        image: '',
-        title: 'Как писать код быстро и безболезненно?',
-        text: text,
-        date: '26.09.2017',
-        read: 'Читать',
-        type: 'image',
-        category: 'Создание сайтов'
-    },
-    {
-        title: 'Заметка',
-        text: text,
-        date: '13.06.2015',
-        type: 'text',
-        category: 'Заметка'
-    },
-    {
-        image: '',
-        title: 'Как писать код быстро и безболезненно?',
-        text: text,
-        date: '26.09.2017',
-        read: 'Читать',
-        type: 'image',
-        category: 'Создание сайтов'
-    },
+let postContent = []
 
-]
+const requestURL = 'http://localhost:3100/posts'
+const fetchPost = (method, url) => {
+    // json-server db.json
+    return fetch(url).then(response => {
+        return response.json()
+    })
+}
+
+fetchPost('GET', requestURL)
+    .then(data => data.forEach(i => {
+        postContent.push(i)
+    }))
+    .catch(err => console.error(err))
+
+// fetchPost('POST', requestURL, body)
+//     .then(data => console.log(data))
+//     .catch(err => console.error(err))
+
+console.log(postContent)
 postContent.forEach(post => {
     let article = document.createElement('article')
     article.className = 'post'
@@ -57,8 +34,8 @@ postContent.forEach(post => {
     } else if (post.type === 'video') {
         article.innerHTMl = getVideoPostHtml(post)
     }
-    postsContainer.prepend(article)
 
+    postsContainer.prepend(article)
 })
 
 let buttonFilter = document.querySelector('.add-post__send--red')

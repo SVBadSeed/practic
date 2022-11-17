@@ -1,0 +1,60 @@
+{
+  "posts": [
+    {
+      "title": "Заметка",
+      "text": "text",
+      "date": " 13.06.2015",
+      "type": " text",
+      "category": "Заметка",
+      "id": 1
+    },
+    {
+      "image": "",
+      "title": "Создание сайтов",
+      "text": "text",
+      "date": " 13.06.2015",
+      "read": "Читать",
+      "type": " text",
+      "category": "Создание сайтов",
+      "id": 2
+    },
+    {
+      "image": "",
+      "title": "Создание сайтов",
+      "text": "text",
+      "date": " 13.06.2015",
+      "read": "Читать",
+      "type": " text",
+      "category": "Создание сайтов",
+      "id": 3
+    },
+    {
+      "title": "Заметка",
+      "text": "text",
+      "date": " 13.06.2015",
+      "type": " text",
+      "category": "Заметка",
+      "id": 4
+    },
+    {
+      "image": "",
+      "title": "Создание сайтов",
+      "text": "text",
+      "date": " 13.06.2015",
+      "read": "Читать",
+      "type": " text",
+      "category": "Создание сайтов",
+      "id": 5
+    },
+    {
+      "image": "",
+      " title": "Создание сайтов",
+      "text": "text",
+      "date": " 13.06.2015",
+      "read": "Читать",
+      "type": " text",
+      "category": "Создание сайтов",
+      "id": 6
+    }
+  ]
+}
