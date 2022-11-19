@@ -4,39 +4,38 @@ let postsContainer = document.querySelector('.post__js1')
 let text = getRandomPostText()
 let postContent = []
 
-const requestURL = 'http://localhost:3100/posts'
-const fetchPost = (method, url) => {
-    // json-server db.json
-    return fetch(url).then(response => {
-        return response.json()
+const requestPostsURL = 'http://localhost:3100/posts'
+
+
+async function fetchPosts() {
+    let response = await fetch(requestPostsURL, {method: 'GET'})
+    return response.json()
+}
+
+function renderPosts(responseData) {
+    postContent.push(...responseData)
+
+    postContent.forEach(post => {
+        console.log(post)
+        let article = document.createElement('article')
+        article.className = 'post'
+
+        if (post.type === 'text') {
+            article.innerHTML = getTextPostHtml(post)
+        } else if (post.type === 'image') {
+            article.innerHTML = getImagePostHtml(post)
+        } else if (post.type === 'video') {
+            article.innerHTMl = getVideoPostHtml(post)
+        }
+
+        postsContainer.prepend(article)
     })
 }
 
-fetchPost('GET', requestURL)
-    .then(data => data.forEach(i => {
-        postContent.push(i)
-    }))
-    .catch(err => console.error(err))
-
-// fetchPost('POST', requestURL, body)
-//     .then(data => console.log(data))
-//     .catch(err => console.error(err))
-
-console.log(postContent)
-postContent.forEach(post => {
-    let article = document.createElement('article')
-    article.className = 'post'
-
-    if (post.type === 'text') {
-        article.innerHTML = getTextPostHtml(post)
-    } else if (post.type === 'image') {
-        article.innerHTML = getImagePostHtml(post)
-    } else if (post.type === 'video') {
-        article.innerHTMl = getVideoPostHtml(post)
-    }
-
-    postsContainer.prepend(article)
+fetchPosts().then(responseData => {
+    renderPosts(responseData)
 })
+
 
 let buttonFilter = document.querySelector('.add-post__send--red')
 let buttonFilter2 = document.querySelector('.add-post__send--orange')

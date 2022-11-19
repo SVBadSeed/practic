@@ -3,8 +3,8 @@
     {
       "title": "Заметка",
       "text": "text",
-      "date": " 13.06.2015",
-      "type": " text",
+      "date": "13.06.2015",
+      "type": "text",
       "category": "Заметка",
       "id": 1
     },
@@ -12,9 +12,9 @@
       "image": "",
       "title": "Создание сайтов",
       "text": "text",
-      "date": " 13.06.2015",
+      "date": "13.06.2015",
       "read": "Читать",
-      "type": " text",
+      "type": "text",
       "category": "Создание сайтов",
       "id": 2
     },
@@ -24,15 +24,15 @@
       "text": "text",
       "date": " 13.06.2015",
       "read": "Читать",
-      "type": " text",
+      "type": "text",
       "category": "Создание сайтов",
       "id": 3
     },
     {
       "title": "Заметка",
       "text": "text",
-      "date": " 13.06.2015",
-      "type": " text",
+      "date": "13.06.2015",
+      "type": "text",
       "category": "Заметка",
       "id": 4
     },
@@ -42,17 +42,17 @@
       "text": "text",
       "date": " 13.06.2015",
       "read": "Читать",
-      "type": " text",
+      "type": "text",
       "category": "Создание сайтов",
       "id": 5
     },
     {
       "image": "",
-      " title": "Создание сайтов",
+      "title": "Создание сайтов",
       "text": "text",
       "date": " 13.06.2015",
       "read": "Читать",
-      "type": " text",
+      "type": "text",
       "category": "Создание сайтов",
       "id": 6
     }
