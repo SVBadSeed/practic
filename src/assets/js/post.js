@@ -16,7 +16,6 @@ function renderPosts(responseData) {
     postContent.push(...responseData)
 
     postContent.forEach(post => {
-        console.log(post)
         let article = document.createElement('article')
         article.className = 'post'
 
