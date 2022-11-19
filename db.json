@@ -9,22 +9,22 @@
       "id": 1
     },
     {
-      "image": "",
+      "image": "http://localhost:3000/assets/images/post-2.jpg",
       "title": "Создание сайтов",
-      "text": "text",
+      "text": "dxd",
       "date": "13.06.2015",
       "read": "Читать",
-      "type": "text",
+      "type": "image",
       "category": "Создание сайтов",
       "id": 2
     },
     {
-      "image": "",
+      "image": "http://localhost:3000/assets/images/post-2.jpg",
       "title": "Создание сайтов",
       "text": "text",
       "date": " 13.06.2015",
       "read": "Читать",
-      "type": "text",
+      "type": "image",
       "category": "Создание сайтов",
       "id": 3
     },
@@ -37,22 +37,22 @@
       "id": 4
     },
     {
-      "image": "",
+      "image": "http://localhost:3000/assets/images/post-2.jpg",
       "title": "Создание сайтов",
       "text": "text",
       "date": " 13.06.2015",
       "read": "Читать",
-      "type": "text",
+      "type": "image",
       "category": "Создание сайтов",
       "id": 5
     },
     {
-      "image": "",
+      "image": "http://localhost:3000/assets/images/post-2.jpg",
       "title": "Создание сайтов",
       "text": "text",
       "date": " 13.06.2015",
       "read": "Читать",
-      "type": "text",
+      "type": "image",
       "category": "Создание сайтов",
       "id": 6
     }
