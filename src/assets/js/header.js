@@ -4,33 +4,7 @@ let headerLeft = document.querySelector('.nav__list')
 let headerRight = document.querySelector('.nav__list-right')
 let headerSearch = document.querySelector('.search')
 
-let headerLeftContent = [
-    {
-        title: 'Главная',
-        link: 'index.html',
-        type: 'outer'
-    },
-    {
-        title: 'Статьи',
-        link: 'index.html',
-        type: 'nested',
-        childLink: [
-            {title: 'Создание сайтов'},
-            {title: 'Интернет-маркетинг'},
-            {title: 'Продвижение видео'}
-        ]
-    },
-    {
-        title: 'Обо мне',
-        link: 'text.html',
-        type: 'outer'
-    },
-    {
-        title: 'Реклама',
-        link: 'text.html',
-        type: 'outer'
-    }
-]
+let headerLeftContent = []
 let headerRightContent = [
     {
         profile: 'Профиль',
@@ -45,28 +19,45 @@ let searchContent = [
     {}
 ]
 
-headerLeftContent.forEach(linkItem => {
-    let navItem = document.createElement('li')
-    navItem.className = 'nav__item'
-    navItem.innerHTML = getHeaderLeftHtml(linkItem)
+const navPostsURL = 'http://localhost:3100/nav'
 
-    if (linkItem.type === 'nested') {
-        let subNav = document.createElement('ul')
+async function fetchNav() {
+    let response = await fetch(navPostsURL, {method: 'GET'})
 
-        subNav.className = 'subnav'
-        navItem.appendChild(subNav)
+    return response.json()
+}
 
-        linkItem.childLink.forEach(item => {
-            let li = document.createElement('li')
-            li.innerHTML = getHeaderNestedHtml(item)
-
-            subNav.appendChild(li)
-        })
-    }
-
-    headerLeft.appendChild(navItem)
+fetchNav().then(responseData => {
+    renderNav(responseData)
 })
 
+
+function renderNav(responseNav) {
+    headerLeftContent.push(...responseNav)
+
+    headerLeftContent.forEach(linkItem => {
+        let navItem = document.createElement('li')
+        navItem.className = 'nav__item'
+        navItem.innerHTML = getHeaderLeftHtml(linkItem)
+
+        if (linkItem.type === 'nested') {
+            let subNav = document.createElement('ul')
+
+            subNav.className = 'subnav'
+            navItem.appendChild(subNav)
+
+            linkItem.childLink.forEach(item => {
+                let li = document.createElement('li')
+                li.innerHTML = getHeaderNestedHtml(item)
+
+                subNav.appendChild(li)
+            })
+        }
+
+        headerLeft.appendChild(navItem)
+    })
+
+}
 
 headerRightContent.forEach(item => {
     let li = document.createElement('li')

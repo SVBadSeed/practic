@@ -56,5 +56,38 @@
       "category": "Создание сайтов",
       "id": 6
     }
+  ],
+  "nav": [
+    {
+      "title": "Главная",
+      "link": "index.html",
+      "type": "outer"
+    },
+    {
+      "title": "Статьи",
+      "link": "index.html",
+      "type": "nested",
+      "childLink": [
+        {
+          "title": "Создание сайтов"
+        },
+        {
+          "title": "Интернет-маркетинг"
+        },
+        {
+          "title": "Продвижение видео"
+        }
+      ]
+    },
+    {
+      "title": "Обо мне",
+      "link": "text.html",
+      "type": "outer"
+    },
+    {
+      "title": "Реклама",
+      "link": "text.html",
+      "type": "outer"
+    }
   ]
 }
