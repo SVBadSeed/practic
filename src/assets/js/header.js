@@ -15,7 +15,7 @@ let headerRightContent = [
         link: '#'
     }
 ]
-let searchContent = []
+
 
 const navPostsURL = 'http://localhost:3100/nav'
 
@@ -65,10 +65,10 @@ headerRightContent.forEach(item => {
     headerRight.append(li)
 })
 
-searchContent.forEach(item => {
-    let form = document.createElement('div')
-    form.className = 'search__container'
-    form.innerHTML = getSearchContentHtml(item)
 
-    headerSearch.append(form)
-})
+let form = document.createElement('div')
+form.className = 'search__container'
+form.innerHTML = getSearchContentHtml()
+
+headerSearch.append(form)
+
