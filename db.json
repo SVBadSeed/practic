@@ -55,6 +55,26 @@
       "type": "image",
       "category": "Создание сайтов",
       "id": 6
+    },
+    {
+      "image": "",
+      "title": "Заметка",
+      "text": "text",
+      "date": "13.06.2015",
+      "read": "Читать",
+      "type": "text",
+      "category": "Создание сайтов",
+      "id": 7
+    },
+    {
+      "image": "http://localhost:3000/assets/images/post-2.jpg",
+      "title": "Hello",
+      "text": "balls",
+      "date": " 13.06.2015",
+      "read": "Читать",
+      "type": "image",
+      "category": "Создание сайтов",
+      "id": 9
     }
   ],
   "nav": [

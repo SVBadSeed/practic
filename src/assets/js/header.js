@@ -15,9 +15,7 @@ let headerRightContent = [
         link: '#'
     }
 ]
-let searchContent = [
-    {}
-]
+let searchContent = []
 
 const navPostsURL = 'http://localhost:3100/nav'
 
