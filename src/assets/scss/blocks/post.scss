@@ -53,6 +53,22 @@
   }
 }
 
+.post__button-refresh {
+  background-color: transparent;
+  border: none;
+
+  font-size: 1.3rem;
+  padding: 0;
+  margin-right: 1.5rem;
+  color: #107EFF;
+
+  cursor: pointer;
+
+  &:hover {
+    border-bottom: 1px solid #107EFF;
+  }
+}
+
 
 .post__header {
   margin: 0 0 2.5rem;

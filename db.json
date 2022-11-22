@@ -1,80 +1,22 @@
 {
   "posts": [
     {
-      "title": "Заметка",
-      "text": "text",
-      "date": "13.06.2015",
-      "type": "text",
-      "category": "Заметка",
-      "id": 1
-    },
-    {
-      "image": "http://localhost:3000/assets/images/post-2.jpg",
-      "title": "Создание сайтов",
-      "text": "dxd",
-      "date": "13.06.2015",
-      "read": "Читать",
-      "type": "image",
-      "category": "Создание сайтов",
-      "id": 2
-    },
-    {
-      "image": "http://localhost:3000/assets/images/post-2.jpg",
-      "title": "Создание сайтов",
-      "text": "text",
-      "date": " 13.06.2015",
-      "read": "Читать",
-      "type": "image",
-      "category": "Создание сайтов",
-      "id": 3
-    },
-    {
-      "title": "Заметка",
-      "text": "text",
-      "date": "13.06.2015",
-      "type": "text",
-      "category": "Заметка",
-      "id": 4
-    },
-    {
-      "image": "http://localhost:3000/assets/images/post-2.jpg",
-      "title": "Создание сайтов",
-      "text": "text",
-      "date": " 13.06.2015",
-      "read": "Читать",
-      "type": "image",
-      "category": "Создание сайтов",
-      "id": 5
-    },
-    {
-      "image": "http://localhost:3000/assets/images/post-2.jpg",
-      "title": "Создание сайтов",
-      "text": "text",
-      "date": " 13.06.2015",
-      "read": "Читать",
-      "type": "image",
-      "category": "Создание сайтов",
-      "id": 6
-    },
-    {
-      "image": "",
-      "title": "Заметка",
-      "text": "text",
-      "date": "13.06.2015",
-      "read": "Читать",
-      "type": "text",
-      "category": "Создание сайтов",
-      "id": 7
-    },
-    {
-      "image": "http://localhost:3000/assets/images/post-2.jpg",
       "title": "Hello",
       "text": "balls",
       "date": " 13.06.2015",
       "read": "Читать",
       "type": "image",
       "category": "Создание сайтов",
-      "id": 9
+      "id": 1
+    },
+    {
+      "title": "Hello",
+      "text": "balls",
+      "date": " 13.06.2015",
+      "read": "Читать",
+      "type": "image",
+      "category": "Создание сайтов",
+      "id": 2
     }
   ],
   "nav": [

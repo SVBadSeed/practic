@@ -4,7 +4,6 @@ const navPostsURL = ' http://localhost:3100/posts'
 
 async function createPost() {
     const post = {
-        image: 'http://localhost:3000/assets/images/post-2.jpg',
         title: 'Hello',
         text: 'balls',
         date: ' 13.06.2015',
@@ -52,4 +51,3 @@ buttonSend.addEventListener('click', event => {
         renderPost(responseData)
     })
 })
-

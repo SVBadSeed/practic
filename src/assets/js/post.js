@@ -6,9 +6,10 @@ let postContent = []
 
 const requestPostsURL = 'http://localhost:3100/posts'
 
-
 async function fetchPosts() {
-    let response = await fetch(requestPostsURL, {method: 'GET'})
+    let response = await fetch(requestPostsURL, {
+        method: 'GET'
+    })
 
     return response.json()
 }
@@ -23,12 +24,25 @@ fetchPosts().then(responseData => {
 
 })
 
+async function fetchPostsDelete(postId) {
+    let response = await fetch(`http://localhost:3100/posts/${postId}`, {
+        method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json;charset=utf-8'
+        }
+    })
+
+    return response.json()
+}
+
+
 function renderPosts(responseData) {
     postContent.push(...responseData)
 
     postContent.forEach(post => {
         let article = document.createElement('article')
         article.className = 'post'
+        article.setAttribute('id', post.id)
 
         if (post.type === 'text') {
             article.innerHTML = getTextPostHtml(post)
@@ -79,7 +93,11 @@ function renderClosePosts() {
     postButtonClose.forEach(item => {
         item.addEventListener('click', event => {
             let parent = event.target.parentNode
-            parent.style.display = 'none'
+            let postId = parent.getAttribute('id')
+
+            fetchPostsDelete(postId).then(responseData => {
+                parent.style.display = 'none'
+            })
         })
     })
 }

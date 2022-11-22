@@ -23,6 +23,9 @@ export const getTextPostHtml = (post) => {
                  <a class="post__category" href="#">${post.category}</a>
                </li>
         </ul>
+          <button class="post__button-refresh">
+            Редактировать
+            </button>
     </div>
     `
 }
@@ -30,7 +33,7 @@ export const getTextPostHtml = (post) => {
 export const getImagePostHtml = (post) => {
     return `
  <button class="post__button-close" type="button">     
-     </button>
+     </button> 
   <div class="post__header post__header--preview">
             <a href="post.html">
                 <img class="post__image" src="assets/images/post-2.jpg"
@@ -59,7 +62,12 @@ export const getImagePostHtml = (post) => {
                     <a class="post__category" href="#">${post.category}</a>
                 </li>
             </ul>
+            <div>
+            <button class="post__button-refresh">
+            Редактировать
+            </button>
             <a class="post__read" href="#"> ${post.read}</a>
+            </div>
         </div>   
     `
 }
