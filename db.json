@@ -1,24 +1,5 @@
 {
-  "posts": [
-    {
-      "title": "Hello",
-      "text": "balls",
-      "date": " 13.06.2015",
-      "read": "Читать",
-      "type": "image",
-      "category": "Создание сайтов",
-      "id": 1
-    },
-    {
-      "title": "Hello",
-      "text": "balls",
-      "date": " 13.06.2015",
-      "read": "Читать",
-      "type": "image",
-      "category": "Создание сайтов",
-      "id": 2
-    }
-  ],
+  "posts": [],
   "nav": [
     {
       "title": "Главная",

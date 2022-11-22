@@ -23,9 +23,11 @@ export const getTextPostHtml = (post) => {
                  <a class="post__category" href="#">${post.category}</a>
                </li>
         </ul>
+        <div>
           <button class="post__button-refresh">
             Редактировать
             </button>
+        </div>
     </div>
     `
 }
